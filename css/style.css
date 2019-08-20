@@ -1,0 +1,276 @@
+body {
+    display: flex;
+    font-family: calibri, sans-serif;
+    background: #111;
+    margin: 0px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 20px 0px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+main {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 358px);
+}
+
+aside {
+    width: 282px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+}
+
+main, aside {
+    margin: 10px 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 30vh;
+    resize: vertical;
+    background: #333;
+    color: inherit;
+    border: none;
+}
+
+.button {
+    margin: 10px 5px;
+    padding: 2px 10px;
+    background: #333;
+    color: #eee;
+    border: 2px solid #555;
+    border-radius: 5px;
+    min-width: 150px;
+    cursor: pointer;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #444;
+    transition: 0.2s;
+    border-color: #666;
+}
+
+#output {
+    color:white;
+    font-family: "courier new";
+    text-transform: initial;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 33vh;
+    max-height: 33vh;
+    resize: vertical;
+    background: #333;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+#login {
+    margin: calc(50vh - 100px) auto;
+    width: 200px;
+    height: 100px;
+}
+
+#login input {
+    display: block;
+    width: 200px;
+    margin: 10px 0px;
+    padding: 2px 10px;
+    background: #444;
+    border: 2px solid #777;
+    color: #eee;
+    font-weight: bold;
+    font-family: courier new;
+}
+
+#login #submit {
+    background: #666;
+    border-color: #999;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.6s;
+}
+
+#login #submit:hover {
+    background: #555;
+    transition: 0.2s;
+}
+
+#back {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.function {
+    display: flex;
+    position: relative;
+    background: #333;
+    border: 2px solid #555;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.function:hover {
+    background: #444;
+    transition: 0.2s;
+    border-color: #666;
+}
+
+.function > * {
+    padding: 5px 10px;
+    text-transform: initial;
+    transition: 0.6s;
+}
+
+.tooltip .tooltipText {
+    display: none;
+    position: absolute;
+    border: inherit;
+    background: #444;
+    min-width: 282px;
+    max-width: 80vw;
+    top: 100%;
+    right: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translate(2px, 0px);
+    box-sizing: border-box;
+    white-space: pre;
+    transition: 0s;
+    z-index: 2;
+}
+
+.tooltip:hover .tooltipText {
+    display: block;
+    background: inherit;
+    transition: 0s;
+}
+
+.tooltip .tooltipText:hover {
+    display: none;
+}
+
+.printFunction {
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.echoFunction, .var_dumpFunction {
+    display: none;
+}
+
+.function:hover > * {
+    display: block;
+}
+
+.function > *:hover {
+    background: #555;
+    transition: 0.2s;
+}
+
+.echoFunction {
+    color: darkgoldenrod;
+}
+
+.var_dumpFunction {
+    color: #30aabc;
+}
+
+.expand {
+    color: #cc0033;
+    right: 0;
+    position: absolute;
+}
+
+#controles {
+    display: flex;
+}
+
+.search {
+    margin: 10px 0px;
+    padding: 2px 10px;
+    margin-left: auto;
+    background: #333;
+    color: #eee;
+    border: 2px solid #555;
+    border-radius: 5px;
+    width: 150px;
+    transition: 0.6s;
+}
+
+.search:hover {
+    background: #444;
+    transition: 0.2s;
+    border-color: #666;
+}
+
+#editor {
+    height: 50vh;
+}
+
+.ace_tooltip {
+    background: #444 !important;
+    color: #fff !important;
+}
+
+.ace_scroller {
+    background: #444 !important;
+    color: #fff !important;
+}
+
+.ace_scroller .ace_completion-highlight{
+    color: #00cc00 !important;
+}
+
+.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line{
+    background-color: #000 !important;
+}
+
+.accordion {
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    padding: 0 5px;
+    background: #333;
+    background-color: rgb(51, 51, 51);
+    color: #eee;
+    border: 2px solid #555;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.active, .accordion:hover {
+    background-color: #444;
+}
+
+.panel {
+    display: none;
+}

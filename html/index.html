@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>SSHManager</title>
+        <meta name = "author" content = "Florian Heidebrecht" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <script src="jquery.min.js"></script>
+        <script src="lib/codemirror.js"></script>
+        <link rel="stylesheet" href="lib/codemirror.css">
+        <link rel="stylesheet" href="theme/dracula.css">
+    </head>
+
+    <body>
+        <main>
+            <h1 class="unselectable">Sandbox</h1>
+            <textarea id="editor">ls -la</textarea>
+            <div id = "controles">
+                <button id = "execute" class = "button unselectable" onclick = "sendCode()">Run</button>
+                <button id = "clear" class = "button unselectable" onclick = "clearFields()">Clear</button>
+                <input type="text" id="search" class="search" onkeyup="" placeholder="Search..">
+            </div>
+            <div id = "output"></div>
+
+            <a href="../" id = "back" class="unselectable">Back</a>
+        </main>
+        <aside>
+        </aside>
+        <footer>
+            <script>var functions = '<?php echo json_encode($functions); ?>';</script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+            <script src="mode/javascript/javascript.js"></script>
+            <script src="main.js"></script>
+            
+        </footer>
+    </body>
+</html>
